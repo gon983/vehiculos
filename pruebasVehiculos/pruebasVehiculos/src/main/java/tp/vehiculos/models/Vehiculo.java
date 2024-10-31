@@ -14,6 +14,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "vehiculos")
 public class Vehiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +29,7 @@ public class Vehiculo {
     private Set<Posicion> posiciones;
 
     public VehiculoDto toDto(){
-        return new VehiculoDto(id,patente,modelo,posiciones);
+        return new VehiculoDto(id,patente);
     }
 
 }

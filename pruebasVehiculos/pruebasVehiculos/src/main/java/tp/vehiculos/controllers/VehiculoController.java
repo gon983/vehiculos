@@ -1,9 +1,7 @@
 package tp.vehiculos.controllers;
 
 
-import com.example.entradasKempes.dtos.EntradaDto;
-import com.example.entradasKempes.models.Entrada;
-import com.example.entradasKempes.services.EntradaService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

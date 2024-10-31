@@ -9,6 +9,7 @@ import tp.vehiculos.clases.MarcaDto;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "modelos")
 public class Modelo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

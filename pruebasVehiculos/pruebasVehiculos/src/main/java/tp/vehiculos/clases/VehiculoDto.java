@@ -16,8 +16,11 @@ public class VehiculoDto {
     private int id;
     private String patente;
     // private Set<PruebaDto> pruebas;
-    private ModeloDto modelo;
-    private Set<PosicionDto> posiciones;
+    //private ModeloDto modelo;
+    //private Set<PosicionDto> posiciones;
 
-
+    /*public VehiculoDto(int id, String patente){
+        this.id = id;
+        this.patente = patente;
+    }*/
 }
