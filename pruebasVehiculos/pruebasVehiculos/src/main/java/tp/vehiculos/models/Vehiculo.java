@@ -16,8 +16,8 @@ public class Vehiculo {
     // private Set<PruebaDto> pruebas;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "id_modelo")
-    private ModeloDto modelo;
+    private Modelo modelo;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "id_vehiculo")
-    private Set<PosicionDto> posiciones;
+    private Set<Posicion> posiciones;
 }

@@ -11,5 +11,5 @@ public class Modelo {
     private String descripcion;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "id_marca")
-    private MarcaDto marca;
+    private Marca marca;
 }
