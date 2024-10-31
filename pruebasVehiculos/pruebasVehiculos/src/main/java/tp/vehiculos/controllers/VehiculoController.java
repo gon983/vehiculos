@@ -30,5 +30,11 @@ public class VehiculoController {
         return ResponseEntity.ok(vehiculosDto);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<VehiculoDto> obtenerVehiculoPorId(@PathVariable int id) {
+        return service.getVehiculoById(id)
+                .map(vehiculo -> ResponseEntity.ok(vehiculo.toDto()))
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
 
 }

@@ -5,6 +5,7 @@ import tp.vehiculos.models.Vehiculo;
 import tp.vehiculos.repositories.VehiculoRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -17,5 +18,9 @@ public class VehiculoService {
     }
     public List<Vehiculo> obtenerTodos() {
         return repository.findAll();
+    }
+
+    public Optional<Vehiculo> getVehiculoById(int id) {
+        return repository.findById(id);
     }
 }
