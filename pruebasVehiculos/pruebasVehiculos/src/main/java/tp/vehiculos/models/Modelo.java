@@ -1,8 +1,13 @@
 package tp.vehiculos.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import tp.vehiculos.clases.MarcaDto;
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Modelo {
     @Id

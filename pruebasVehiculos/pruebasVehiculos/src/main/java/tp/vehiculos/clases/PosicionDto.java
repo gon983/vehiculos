@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PosicionDto {
+    private int id;
     private LocalDateTime fecha_hora;
     private int latitud;
     private int longitud;

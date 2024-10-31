@@ -1,12 +1,18 @@
 package tp.vehiculos.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import tp.vehiculos.clases.ModeloDto;
 import tp.vehiculos.clases.PosicionDto;
+import tp.vehiculos.clases.VehiculoDto;
 
 import java.util.Set;
 
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Vehiculo {
     @Id
@@ -20,4 +26,11 @@ public class Vehiculo {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "id_vehiculo")
     private Set<Posicion> posiciones;
+
+    public VehiculoDto toDto(){
+        return new VehiculoDto(id,patente,modelo,posiciones);
+    }
+
 }
+
+
