@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29ae1112-0865-4c44-8614-103aa9742ae9" name="Changes" comment="" />
+    <list default="true" id="29ae1112-0865-4c44-8614-103aa9742ae9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../enviadorDePosiciones/enviadorPosiciones/src/main/java/EnviadorPosiciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/agencia.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/clases/MarcaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/dtos/MarcaDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/clases/ModeloDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/dtos/ModeloDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/clases/PosicionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/dtos/PosicionDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/clases/VehiculoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/dtos/VehiculoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/configurations/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/configurations/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/configurations/ConfiguracionAgencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/configurations/ConfiguracionAgencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/controllers/PosicionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/controllers/PosicionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/controllers/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/controllers/VehiculoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/models/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/models/Marca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/models/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/models/Modelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/models/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/models/Posicion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/models/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/models/Vehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/repositories/MarcaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/repositories/MarcaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/repositories/ModeloRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/repositories/ModeloRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/repositories/PosicionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/repositories/PosicionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/repositories/VehiculoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/repositories/VehiculoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/services/ConfiguracionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/services/ConfiguracionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/services/PosicionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/services/PosicionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/services/VehiculoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pruebasVehiculos/src/main/java/tp/vehiculos/vehiculos/services/VehiculoService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2o8Z0ti0ydyFTDBCFGMnqcfzg1g" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -18,8 +44,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/pruebasVehiculos/pruebasVehiculos"
+    "last_opened_file_path": "C:/Users/Gonzalo/Desktop/vehiculos/pruebasVehiculos/pruebasVehiculos"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
