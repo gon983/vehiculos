@@ -24,13 +24,17 @@ public class Vehiculo {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "id_modelo")
     private Modelo modelo;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_vehiculo")
-    private Set<Posicion> posiciones;
+
+
 
     public VehiculoDto toDto(){
         return new VehiculoDto(id,patente);
     }
+
+
+    //public iniciarPrueba(){
+
+    //}
 
 }
 

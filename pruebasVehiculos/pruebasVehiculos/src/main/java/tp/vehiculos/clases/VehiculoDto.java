@@ -10,11 +10,16 @@ import java.util.Set;
 
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class VehiculoDto {
     private int id;
     private String patente;
+
+    public VehiculoDto(int id, String patente) {
+        this.id = id;
+        this.patente = patente;
+    }
+
     // private Set<PruebaDto> pruebas;
     //private ModeloDto modelo;
     //private Set<PosicionDto> posiciones;
