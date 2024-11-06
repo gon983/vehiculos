@@ -17,6 +17,7 @@ public class ConfiguracionService {
     }
 
     public ConfiguracionAgencia obtenerConfiguration() {
-        return restTemplate.getForObject(API_URL, ConfiguracionAgencia.class);
+        ConfiguracionAgencia agencia = restTemplate.getForObject(API_URL, ConfiguracionAgencia.class);
+        return agencia;
     }
 }

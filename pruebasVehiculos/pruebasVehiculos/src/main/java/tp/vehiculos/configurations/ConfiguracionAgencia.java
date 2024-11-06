@@ -1,13 +1,17 @@
 package tp.vehiculos.configurations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import tp.vehiculos.models.Posicion;
 
 import java.util.List;
 
 public class ConfiguracionAgencia {
+    @JsonProperty("coordenadasAgencia")
     private Coordenadas coordenadasAgencia;
+    @JsonProperty("radioAdmitidoKm")
     private double radioAdmitidoKm;
+    @JsonProperty("zonasRestringidas")
     private List<ZonaRestringida> zonasRestringidas;
 
     public void asegurarCumplimientoNormas(Posicion posicion){
@@ -58,7 +62,9 @@ public class ConfiguracionAgencia {
 
     @Data
     public static class Coordenadas {
+        @JsonProperty("lat")
         private double lat;
+        @JsonProperty("lon")
         private double lon;
 
         public double getLatitud() {
@@ -68,11 +74,21 @@ public class ConfiguracionAgencia {
         public double getLongitud() {
             return lon;
         }
+
+        @Override
+        public String toString() {
+            return "Coordenadas{" +
+                    "lat=" + lat +
+                    ", lon=" + lon +
+                    '}';
+        }
     }
 
     @Data
     public static class ZonaRestringida {
+        @JsonProperty("noroeste")
         private Coordenadas noroeste;
+        @JsonProperty("sureste")
         private Coordenadas sureste;
 
 
@@ -84,8 +100,23 @@ public class ConfiguracionAgencia {
 
 
         }
+
+        @Override
+        public String toString() {
+            return "ZonaRestringida{" +
+                    "noroeste=" + noroeste +
+                    ", sureste=" + sureste +
+                    '}';
+        }
     }
 
-
+    @Override
+    public String toString() {
+        return "ConfiguracionAgencia{" +
+                "coordenadasAgencia=" + coordenadasAgencia +
+                ", radioAdmitidoKm=" + radioAdmitidoKm +
+                ", zonasRestringidas=" + zonasRestringidas +
+                '}';
+    }
 }
 

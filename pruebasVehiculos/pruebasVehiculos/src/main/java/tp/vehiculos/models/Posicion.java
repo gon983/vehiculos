@@ -17,13 +17,14 @@ public class Posicion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name= "id_vehiculo")
     private Vehiculo vehiculo;
     private LocalDateTime fecha_hora;
     private double latitud;
     private double longitud;
-    //@Column(name="en_zona_restringida")
+    @Column(name="en_zona_restringida")
     private boolean enZonaRestringida;
-    //@Column(name="fuera_de_radio_permitido")
+    @Column(name="fuera_de_radio_permitido")
     private boolean fueraDeRadioPermitido;
 
     public Posicion(Vehiculo vehiculo, double latitud, double longitud) {

@@ -20,7 +20,6 @@ public class Vehiculo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String patente;
-    // private Set<PruebaDto> pruebas;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "id_modelo")
     private Modelo modelo;
