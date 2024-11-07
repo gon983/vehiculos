@@ -63,4 +63,14 @@ public class Posicion {
     public void fueraDeRadio(){
         this.fueraDeRadioPermitido = true;
     }
+
+    @Override
+    public String toString() {
+        return "Posicion{" +
+                "latitud=" + latitud +
+                ", longitud=" + longitud +
+                ", enZonaRestringida=" + enZonaRestringida +
+                ", fueraDeRadioPermitido=" + fueraDeRadioPermitido +
+                '}';
+    }
 }

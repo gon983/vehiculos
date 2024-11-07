@@ -12,6 +12,7 @@ import tp.vehiculos.vehiculos.models.Vehiculo;
 import tp.vehiculos.vehiculos.repositories.PosicionRepository;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,7 +40,8 @@ public class PosicionService {
             ConfiguracionAgencia agencia = serviceConfiguracion.obtenerConfiguration();
             boolean necesarioNotificar = agencia.asegurarCumplimientoNormas(posicion);
             guardarPosicion(posicion);
-            if (necesarioNotificar){
+
+            if (necesarioNotificar){ //Descomentar lo que esta abajo para notificar
                 //ResponseEntity<Void> response = restTemplate.postForEntity(API_URL, posicion.toDto(), Void.class);
 
 
@@ -55,11 +57,14 @@ public class PosicionService {
     }
 
     public double calcularCantidadKm(LocalDateTime fechaInicio, LocalDateTime fechaFin, int idVehiculo){
-        List<Posicion> posiciones = obtenerEntreFechas(fechaInicio,fechaFin)
-                .stream()
+        System.out.println("Entre");
+        List<Posicion> posiciones = obtenerEntreFechas(fechaInicio,fechaFin);
+        System.out.println(posiciones.getFirst());
+
+                /*.stream()
                 .filter(posicion -> {
                     return posicion.getVehiculo().getId() == idVehiculo;
-                }).toList();
+                }).toList();*/
 
         Posicion posicion1 = null;
         double distanciaTotal = 0;

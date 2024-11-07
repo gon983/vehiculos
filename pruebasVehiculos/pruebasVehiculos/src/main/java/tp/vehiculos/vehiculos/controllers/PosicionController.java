@@ -1,7 +1,9 @@
 package tp.vehiculos.vehiculos.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import tp.vehiculos.vehiculos.dtos.InformeKmRequest;
 import tp.vehiculos.vehiculos.dtos.PosicionDto;
 import tp.vehiculos.vehiculos.services.PosicionService;
 
@@ -19,7 +21,19 @@ public class PosicionController {
     public void recibirPosicion(@RequestBody PosicionDto posicionDto) {
         servicePosicion.procesarPosicion(posicionDto);
 
+
     }
+
+    @PostMapping("/informeKmRecorridos")
+    public ResponseEntity<Double>  calcularKMParaVehiculoEnPeriodo(@RequestBody InformeKmRequest informeKmRequest){
+        double cantidadKm = servicePosicion.calcularCantidadKm(informeKmRequest.getFechaDesde(),informeKmRequest.getFechaHasta(), informeKmRequest.getId_vehiculo());
+        return ResponseEntity.ok(cantidadKm);
+
+    }
+
+
+
+
 
 
 
