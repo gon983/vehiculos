@@ -26,6 +26,9 @@ public class Vehiculo {
         return new VehiculoDto(id,patente);
     }
 
+    public int getId() {
+        return id;
+    }
 
     //public iniciarPrueba(){
 

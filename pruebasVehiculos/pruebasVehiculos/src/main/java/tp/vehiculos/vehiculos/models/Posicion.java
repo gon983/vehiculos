@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import tp.vehiculos.vehiculos.dtos.PosicionDto;
 
 import java.time.LocalDateTime;
 @Data
@@ -18,7 +19,7 @@ public class Posicion {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name= "id_vehiculo")
     private Vehiculo vehiculo;
-    private LocalDateTime fecha_hora;
+    private LocalDateTime fecha;
     private double latitud;
     private double longitud;
     @Column(name="en_zona_restringida")
@@ -30,17 +31,21 @@ public class Posicion {
         this.vehiculo = vehiculo;
         this.latitud= latitud;
         this.longitud = longitud;
-        this.fecha_hora = LocalDateTime.now();
+        this.fecha = LocalDateTime.now();
         this.enZonaRestringida = false;
         this.fueraDeRadioPermitido = false;
+    }
+
+    public PosicionDto toDto(){
+        return new PosicionDto(getVehiculo().getId(), getLatitud(), getLongitud(),enZonaRestringida,fueraDeRadioPermitido);
     }
 
     public Vehiculo getVehiculo() {
         return vehiculo;
     }
 
-    public LocalDateTime getFecha_hora() {
-        return fecha_hora;
+    public LocalDateTime getFecha() {
+        return fecha;
     }
 
     public double getLatitud() {
