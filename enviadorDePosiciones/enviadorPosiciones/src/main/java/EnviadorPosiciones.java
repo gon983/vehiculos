@@ -18,20 +18,26 @@ public class EnviadorPosiciones {
     public void enviarPosiciones() {
         // Array 1: Movimiento dentro del radio permitido y evitando zonas restringidas
         List<String> posicionesDentroDeRadio = List.of(
-                "{\"idVehiculo\":1,\"latitud\":42508900,\"longitud\":153472000}",
-                "{\"idVehiculo\":1,\"latitud\":42509000,\"longitud\":153473000}",
-                "{\"idVehiculo\":1,\"latitud\":42509100,\"longitud\":153474000}",
-                "{\"idVehiculo\":1,\"latitud\":42509200,\"longitud\":153475000}",
-                "{\"idVehiculo\":1,\"latitud\":42509300,\"longitud\":153476000}"
+                "{\"idVehiculo\":1,\"latitud\":42.50886738457441,\"longitud\":1.5347139324337429}",
+                "{\"idVehiculo\":1,\"latitud\":42.509000,\"longitud\":1.53473000}",
+                "{\"idVehiculo\":1,\"latitud\":42.509100,\"longitud\":1.53474000}",
+                "{\"idVehiculo\":1,\"latitud\":42.509200,\"longitud\":1.53475000}",
+                "{\"idVehiculo\":1,\"latitud\":42.509300,\"longitud\":1.53476000}"
         );
 
         // Array 2: Comienza dentro del radio, pero sale progresivamente
         List<String> posicionesSalidaDeRadio = List.of(
-                "{\"idVehiculo\":2,\"latitud\":42508900,\"longitud\":153472000}",
-                "{\"idVehiculo\":2,\"latitud\":42509400,\"longitud\":153480000}",
-                "{\"idVehiculo\":2,\"latitud\":42509800,\"longitud\":153490000}",
-                "{\"idVehiculo\":2,\"latitud\":42510000,\"longitud\":153500000}",
-                "{\"idVehiculo\":2,\"latitud\":42510500,\"longitud\":153510000}"
+                "{\"idVehiculo\":2,\"latitud\":42.508900,\"longitud\":1.53472000}",
+                "{\"idVehiculo\":2,\"latitud\":42.509400,\"longitud\":1.53480000}",
+                "{\"idVehiculo\":2,\"latitud\":42.509800,\"longitud\":1.53490000}",
+                "{\"idVehiculo\":2,\"latitud\":42.510000,\"longitud\":1.53500000}",
+                "{\"idVehiculo\":2,\"latitud\":42.510500,\"longitud\":1.53510000}",
+                "{\"idVehiculo\":2,\"latitud\":42.520500,\"longitud\":1.53510000}",
+                "{\"idVehiculo\":2,\"latitud\":42.530500,\"longitud\":1.53510000}",
+                "{\"idVehiculo\":2,\"latitud\":42.540500,\"longitud\":1.53510000}",
+                "{\"idVehiculo\":2,\"latitud\":42.550500,\"longitud\":1.53510000}",
+                "{\"idVehiculo\":2,\"latitud\":42.560500,\"longitud\":1.53510000}",
+                "{\"idVehiculo\":2,\"latitud\":42.570500,\"longitud\":1.53510000}"
         );
 
         // Enviar posiciones dentro del radio

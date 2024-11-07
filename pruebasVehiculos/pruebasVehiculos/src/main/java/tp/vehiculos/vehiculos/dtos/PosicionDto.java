@@ -11,18 +11,18 @@ public class PosicionDto {
     //private int id;
     private int idVehiculo;
     // private LocalDateTime fecha_hora;
-    private int latitud;
-    private int longitud;
+    private double latitud;
+    private double longitud;
 
     public int getIdVehiculo() {
         return idVehiculo;
     }
 
-    public int getLatitud() {
+    public double getLatitud() {
         return latitud;
     }
 
-    public int getLongitud() {
+    public double getLongitud() {
         return longitud;
     }
 }

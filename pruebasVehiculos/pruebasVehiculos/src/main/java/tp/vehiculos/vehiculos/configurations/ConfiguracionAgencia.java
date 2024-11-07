@@ -6,6 +6,8 @@ import tp.vehiculos.vehiculos.models.Posicion;
 
 import java.util.List;
 
+import static tp.vehiculos.vehiculos.configurations.Geolocalizacion.calcularDistanciaEuclidiana;
+
 public class ConfiguracionAgencia {
     @JsonProperty("coordenadasAgencia")
     private Coordenadas coordenadasAgencia;
@@ -24,9 +26,11 @@ public class ConfiguracionAgencia {
     }
 
     public boolean fueraDeRadio(Posicion posicion){
-        double distancia = calcularDistanciaEuclidiana(coordenadasAgencia.getLatitud(), coordenadasAgencia.getLongitud(), posicion.getLatitud(), posicion.getLongitud());
+        double distancia = Geolocalizacion.calcularDistanciaEuclidiana(coordenadasAgencia.getLatitud(), coordenadasAgencia.getLongitud(), posicion.getLatitud(), posicion.getLongitud());
+
         if(distancia>radioAdmitidoKm){
             posicion.fueraDeRadio();
+            System.out.println("fuera de radio");
             return true;
         }
         return false;
@@ -41,24 +45,14 @@ public class ConfiguracionAgencia {
         for (ZonaRestringida zona : zonasRestringidas) {
             if (zona.estaEnZonaRestringida(lat, lon)) {
                 posicion.enZonaRestringida();
+                System.out.println("zona restringida");
                 return true;
             }
         }
         return false;
     }
 
-    public static double calcularDistanciaEuclidiana(double lat1, double lon1, double lat2, double lon2) {
-        double CONVERSION_GRADOS_A_KM = 111.0;
-        double lat1Km = lat1 * CONVERSION_GRADOS_A_KM;
-        double lon1Km = lon1 * CONVERSION_GRADOS_A_KM;
-        double lat2Km = lat2 * CONVERSION_GRADOS_A_KM;
-        double lon2Km = lon2 * CONVERSION_GRADOS_A_KM;
 
-        // Usar el teorema de Pitágoras para calcular la distancia euclidiana
-        double distancia = Math.sqrt(Math.pow(lat2Km - lat1Km, 2) + Math.pow(lon2Km - lon1Km, 2));
-
-        return distancia;
-    }
 
     @Data
     public static class Coordenadas {
