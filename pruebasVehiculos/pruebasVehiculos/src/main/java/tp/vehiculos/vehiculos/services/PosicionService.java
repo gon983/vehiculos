@@ -1,7 +1,6 @@
 package tp.vehiculos.vehiculos.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import tp.vehiculos.vehiculos.configurations.Geolocalizacion;
@@ -12,7 +11,6 @@ import tp.vehiculos.vehiculos.models.Vehiculo;
 import tp.vehiculos.vehiculos.repositories.PosicionRepository;
 
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,7 +32,7 @@ public class PosicionService {
 
     public void procesarPosicion(PosicionDto posicionDto){
         Optional<Vehiculo> vehiculo = serviceVehiculos.getVehiculoById(posicionDto.getIdVehiculo());
-        // y si esta en Prueba
+        // TIENE QUE ESTAR EN PRUEBA EL VEHICULO
         if (vehiculo.isPresent()) {
             Posicion posicion = new Posicion(vehiculo.get(), posicionDto.getLatitud(), posicionDto.getLongitud());
             ConfiguracionAgencia agencia = serviceConfiguracion.obtenerConfiguration();
@@ -58,7 +56,7 @@ public class PosicionService {
 
     public double calcularCantidadKm(LocalDateTime fechaInicio, LocalDateTime fechaFin, int idVehiculo){
         System.out.println("Entre");
-        List<Posicion> posiciones = obtenerEntreFechas(fechaInicio,fechaFin);
+        List<Posicion> posiciones = obtenerEntreFechas(fechaInicio,fechaFin, idVehiculo);
         System.out.println(posiciones.getFirst());
 
                 /*.stream()
@@ -80,8 +78,14 @@ public class PosicionService {
         return distanciaTotal;
     }
 
-    public List<Posicion> obtenerEntreFechas(LocalDateTime fechaInicio,LocalDateTime fechaFin){
-        return repository.findByFechaBetween(fechaInicio, fechaFin);
+    public List<Posicion> obtenerEntreFechas(LocalDateTime fechaInicio,LocalDateTime fechaFin, int idVehiculo){
+        return repository.findByFechaBetweenAndVehiculoId(fechaInicio, fechaFin, idVehiculo);
+
+    }
+    public Optional<Posicion> obtenerEntreFechasIncidente(LocalDateTime fechaInicio,LocalDateTime fechaFin, int idVehiculo){
+        Optional<Posicion> incidente = repository.findIncidente(fechaInicio, fechaFin, idVehiculo);
+        return incidente;
+
 
     }
 

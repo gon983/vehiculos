@@ -22,6 +22,7 @@ public class Vehiculo {
 
 
 
+
     public VehiculoDto toDto(){
         return new VehiculoDto(id,patente);
     }

@@ -31,6 +31,10 @@ public class PosicionController {
 
     }
 
+    // Hacer un controller que reciba un arrays de pruebas y avise en cuales hubo incidente y de que tipo
+    //@PostMapping("/incid
+
+
 
 
 
